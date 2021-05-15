@@ -1,0 +1,106 @@
+
+@import './variables.scss';
+@import './animations.scss';
+@import './fonts.scss';
+@import './mixins.scss';
+html{
+    overflow: hidden;
+    // background: rgb(51,51,51);
+    // background: linear-gradient(120deg, rgba(51,51,51,1) 0%, rgba(124,124,124,1) 50%, rgba(51,51,51,1) 100%);
+    color: $foreground;
+    //@include gradientShift($backgroundColorOne,$backgroundColorTwo );
+    background-color: $background;
+    .red{
+        color: red;
+    }
+    .main-container{
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        > div{
+            order: 2;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            span{    
+                margin: -2vw 0 6.6vw -.42vw;
+                font-family: RobotoFlex,sans-serif;
+                font-size: 10vw;
+                @include maxDesktop{
+                    font-size: 180px;
+                }
+                line-height: 90%;
+                letter-spacing: -.02em;
+                -moz-font-feature-settings: "ss02" off;
+                font-feature-settings: "ss02" off;
+                text-align: center;
+                font-weight: 400;
+                font-variation-settings: "wght" 1000;
+                text-shadow: -2px 1px 0 #000, -1px -2px 0 #000, -2px -1px 0 #000;
+                animation: breathe 8s infinite both;
+
+                &.--index-1{
+                    animation-delay: 0.2s;
+                }
+                &.--index-2{
+                    animation-delay: 0.4s;
+                }
+                &.--index-3{
+                    animation-delay: 0.6s;
+                }
+                &.--index-4{
+                    animation-delay: 0.8s;
+                }
+                &.--index-5{
+                    animation-delay: 1s;
+                }
+                &.--index-6{
+                    animation-delay: 1.2s;
+                }
+                &.--index-7{
+                    animation-delay: 1.4s;
+                }
+                &.--index-8{
+                    animation-delay: 1.6s;
+                }
+                &.--index-9{
+                    animation-delay: 1.8s;
+                }
+                &.--index-10{
+                    animation-delay: 2s;
+                }
+                &.--index-11{
+                    animation-delay: 2.2s;
+                }
+                &.--index-12{
+                    animation-delay: 2.4s;
+                }
+            }
+        }
+        .smile{
+            position: relative;
+            margin: auto;
+            width: 20px;
+            img{
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                transform: scale(0.2)
+            }
+            &.active{
+               // transform: scale(7.5);
+                img{
+                    
+               transition: all 1s;
+               animation: spin-animation 5s alternate infinite both;
+                }
+            }
+            @include spinAnimation;
+        }
+        
+    }
+}

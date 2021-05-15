@@ -1,0 +1,70 @@
+// Gradient shift
+@mixin gradientShift($colorOne, $colorTwo){
+    background: linear-gradient(63deg, $colorOne, $colorTwo);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    @keyframes gradientShift{
+        0%{background-position:10% 0%}
+        50%{background-position:91% 100%}
+        100%{background-position:10% 0%}
+    }
+}
+
+@mixin breatheFont(){
+    @keyframes breathe{
+        0% {
+            font-variation-settings: "wght" 1000,"wdth" 200;
+            letter-spacing: -.07em;
+        }
+        20% {
+            font-variation-settings: "wght" 0,"wdth" 500;
+            letter-spacing: -.1em;
+        }
+        50% {
+            font-variation-settings: "wght" 1000,"wdth" 200;
+            letter-spacing: -.07em;
+        }
+        100% {
+            font-variation-settings: "wght" 1000,"wdth" 200;
+            letter-spacing: -.07em;
+        }
+    }
+}
+
+@mixin spinAnimation(){
+    @keyframes spin-animation{
+        0% {
+            transform: rotate(0deg) scale(1);
+            
+        }
+        40% {
+            transform: rotate(180deg) scale(5);
+        }
+        80% {
+            transform: rotate(0deg) scale(5);
+        }
+        100%{
+            transform: rotate(0deg) scale(5);
+        }
+    }
+}
+
+@mixin fadeInandOut(){
+    @keyframes fadeInandOut{
+        0%{
+            opacity: 0;
+        }
+        40%{
+            opacity: 0; 
+        }
+        60%{
+            opacity: 1;
+        }
+        80%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+        }
+    }
+}

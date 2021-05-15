@@ -1,0 +1,30 @@
+@import '../../../shared/animations.scss';
+@import '../../../shared/variables.scss';
+@import '../../../shared/fonts.scss';
+.stats-container{
+    position: relative;
+    &:before{
+        content: '';
+        display: block;
+        width: 80%;
+        height: 3px;
+        @include gradientShift(red,white );
+        position: absolute;
+        opacity:0.4;
+        border-radius: 3px;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    > div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+        font-family: Quantico;
+
+        a{
+            color: white
+        }
+    }
+}

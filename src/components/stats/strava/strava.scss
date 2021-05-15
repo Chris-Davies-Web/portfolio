@@ -1,0 +1,51 @@
+@import '../../../shared/animations.scss';
+@import '../../../shared/variables.scss';
+@import '../../../shared/fonts.scss';
+
+.strava-totals{
+    .strava-running{
+        display: flex;
+        flex-direction: row;
+        .animation{
+            max-height: 100px;
+            max-width: 100px;
+            img{
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+        .distances{
+                position: relative;
+                p{
+                    display: inline-block;
+                    margin: 0 10px;
+                    span{
+                        display: block;
+                    }
+                    div{
+                        position: relative;
+                        @include fadeInandOut;
+                        .fade-1{
+                            opacity: 1;
+                            animation: fadeInandOut 6s infinite;
+                            background: black;
+                            animation-fill-mode: forwards;
+                            white-space: nowrap;
+                        }
+                        .fade-2{
+                            opacity: 0;
+                            position: absolute;
+                            top: 0;
+                            animation: fadeInandOut 6s infinite;
+                            animation-delay: 3s;
+                            animation-fill-mode: forwards;
+                            background: black;
+                            white-space: nowrap;
+
+                        }
+                    }
+                }
+            
+        }
+    }
+}
