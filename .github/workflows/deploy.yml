@@ -15,7 +15,8 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }} # User of the server you want to ssh into
      
           script: |
-            cd root@159.65.22.195:/var/www/chrisdaviesweb.com/html 
+            cd /var/www/chrisdaviesweb.com/html 
             git clone https://github.com/Chris-Davies-Web/portfolio 
+            npm i
             npm run build
             echo 'Deployment successful to digital ocean'   
